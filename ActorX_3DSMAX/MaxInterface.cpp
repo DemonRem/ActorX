@@ -4416,7 +4416,7 @@ void SaveCurrentSceneSkin()
 
 		// TCHAR MessagePopup[512];
 		TCHAR to_ext[32];
-		_tcscpy(to_ext, _T("PSK"));
+		_tcscpy(to_ext, _T("psk"));
 		_stprintf(DestPath,_T("%s\\%s.%s"),(char*)to_path,(char*)to_skinfile,to_ext);
 		FastFileClass OutFile;
 

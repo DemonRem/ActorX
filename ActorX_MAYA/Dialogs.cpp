@@ -139,7 +139,7 @@ UBOOL SaveAnimSet( char* DestPath )
 
 		if( !OurScene.DoSuppressAnimPopups )
 		{
-			PopupBox( "OK: Animation file %s.PSA written. Bones total: %i  Sequences: %i", to_animfile, WrittenBones, TempActor.OutAnims.Num() );
+			PopupBox( "OK: Animation file %s.psa written. Bones total: %i  Sequences: %i", to_animfile, WrittenBones, TempActor.OutAnims.Num() );
 		}
 	}
 
@@ -666,7 +666,7 @@ INT_PTR CALLBACK ActorManagerDlgProc( HWND hWnd, UINT msg, WPARAM wParam, LPARAM
 				case IDC_ANIMLOAD:
 				{
 					char to_ext[32];
-					_tcscpy_s(to_ext, ("PSA"));
+					_tcscpy_s(to_ext, ("psa"));
 					sprintf_s(DestPath,"%s\\%s.%s",(char*)to_path,(char*)to_animfile,to_ext);
 					FastFileClass InFile;
 					if ( InFile.OpenExistingFileForReading(DestPath) != 0) // Error!
@@ -744,7 +744,7 @@ INT_PTR CALLBACK ActorManagerDlgProc( HWND hWnd, UINT msg, WPARAM wParam, LPARAM
 				case IDC_ANIMSAVE:
 				{
 					char to_ext[32];
-					_tcscpy_s(to_ext, ("PSA"));
+					_tcscpy_s(to_ext, ("psa"));
 					sprintf_s(DestPath,"%s\\%s.%s",(char*)to_path,(char*)to_animfile,to_ext);
 
 					SaveAnimSet( DestPath );

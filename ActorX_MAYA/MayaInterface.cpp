@@ -3783,7 +3783,7 @@ MStatus AXWriteSequence(BOOL bUseSourceOutPath)
 	// Save it.
 	//
 	char to_ext[32];
-	_tcscpy_s(to_ext, ("PSA"));
+	_tcscpy_s(to_ext, ("psa"));
 	if( !bUseSourceOutPath )
 	{
 		strcpysafe( OutFolder, to_path, MAX_PATH );
@@ -3864,7 +3864,7 @@ MStatus AXWritePoses()
 		//
 
 		char to_ext[32];
-		_tcscpy_s(to_ext, ("PSA"));
+		_tcscpy_s(to_ext, ("psa"));
 		sprintf_s( OutPath,"%s\\%s%i.%s",(char*)to_path,(char*)SceneName,FrameSweepCounter,to_ext);
 
 		if ( TempActor.OutAnims.Num() == 0)
@@ -4429,7 +4429,7 @@ MStatus ActorXTool11::doIt( const MArgList& args )
 
 		// Save animation - as done in Dialogs.cpp
 		char to_ext[32];
-		_tcscpy_s(to_ext, ("PSA"));
+		_tcscpy_s(to_ext, ("psa"));
 		sprintf_s(DestPath,"%s\\%s.%s",(char*)to_path,(char*)to_animfile,to_ext);
 		SaveAnimSet( DestPath );    // No error popups...
 
@@ -4872,7 +4872,7 @@ void SaveCurrentSceneSkin(const char * OutputFile, TArray<char*>& LogList)
 
 		// TCHAR MessagePopup[512];
 		TCHAR to_ext[32];
-		_tcscpy_s(to_ext, ("PSK"));
+		_tcscpy_s(to_ext, ("psk"));
 		sprintf_s(DestPath,"%s\\%s.%s",(char*)to_path,(char*)OutputFile,to_ext);
 		FastFileClass OutFile;
 
@@ -5072,7 +5072,7 @@ static INT_PTR CALLBACK PanelOneDlgProc(HWND hWnd, UINT msg, WPARAM wParam, LPAR
 
 					// If 'QUICKDISK' is on, load to output package, move/overwrite, and save all at once.
 					char to_ext[32];
-					_tcscpy_s(to_ext, ("PSA"));
+					_tcscpy_s(to_ext, ("psa"));
 					sprintf_s(DestPath,"%s\\%s.%s",(char*)to_path,(char*)to_animfile,to_ext);
 
 					// Optionally load them from the existing on disk..
